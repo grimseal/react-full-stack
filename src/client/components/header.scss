@@ -1,0 +1,15 @@
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+
+
+.header {
+  background: $gray-900;
+  text-align: right;
+  line-height: 40px;
+
+  color: $gray-100;
+
+  a {
+    color: $red;
+  }
+}

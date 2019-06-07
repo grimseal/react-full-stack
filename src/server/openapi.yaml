@@ -1,0 +1,46 @@
+openapi: 3.0.0
+servers:
+  - url: //localhost:3000/
+    description: Dev server
+info:
+  version: 0.0.1
+  title: React Full Stack
+  x-logo:
+    url: '/docs-logo.png'
+    altText: React Full Stack
+tags:
+  - name: auth
+    description: Authentication and registration
+  - name: user
+    description: Operations about user
+x-tagGroups:
+  - name: General
+    tags:
+      - general
+  - name: Authentication
+    tags:
+      - auth
+  - name: User Management
+    tags:
+      - user
+components:
+  securitySchemes:
+    session:
+      description: Session id cookie.
+      type: apiKey
+      name: sid
+      in: cookies
+  htmlTemplate: >
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>React Full Stack</title>
+      <link rel="stylesheet" href="/bundle.css" />
+    </head>
+    <body>
+      <div id="root">{react server rendered html}</div>
+      <script src="/bundle.js" data-props="{base64}"></script>
+    </body>
+    </html>
